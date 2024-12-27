@@ -10,6 +10,8 @@ This Python script analyzes the commit history of Git repositories and exports t
   - Parquet (using PyArrow)
   - Excel
   - SQLite database
+  - CSV
+  - JSON
 
 ## Requirements
 
@@ -56,6 +58,7 @@ python script.py https://github.com/user/repo --format sqlite --output my_analys
 - `-n, --noclone`: Fetch commit history directly from remote without cloning
 - `-d, --dest`: Directory to clone the repository (default: "./cloned_repo")
 - `-o, --output`: Base name for the output file without extension (default: "commit_history")
+- `-od, --output-dir`: Directory to save the output file (default: current directory)
 - `-f, --format`: Output format - 'parquet', 'excel', or 'sqlite' (default: "parquet")
 - `-db, --db-path`: Path to SQLite database if using sqlite format (default: "commit_history.db")
 - `-t, --table-name`: Table name in SQLite database (default: "commits")
